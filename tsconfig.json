@@ -17,6 +17,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "esModuleInterop": true,
+    "rootDirs": ["src", "stories"],
     "jsx": "react"
   },
   "include": ["src/**/*"],
