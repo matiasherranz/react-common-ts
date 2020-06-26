@@ -1,0 +1,11 @@
+@import '../../index';
+
+.loading {
+  width: 100%;
+  text-align: center;
+  display: table;
+  img {
+    vertical-align: middle;
+    display: inline-block;
+  }
+}
