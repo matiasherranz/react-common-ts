@@ -16,8 +16,10 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "rootDirs": ["src", "stories"],
+    "jsx": "react"
   },
-  "include": ["src"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules", "build", "coverage"]
 }
