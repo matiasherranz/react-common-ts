@@ -1,0 +1,18 @@
+// Core variables and mixins
+@import '~ipsy-core-styles/scss/partials/variables';
+@import '~ipsy-core-styles/scss/partials/mixins';
+
+// Dependencies
+@import '~ipsy-core-styles/scss/partials/fonts';
+@import '~ipsy-core-styles/scss/partials/glyphicons';
+
+// Core SCSS
+@import '~ipsy-core-styles/scss/partials/grid';
+@import '~ipsy-core-styles/scss/partials/typography';
+@import '~ipsy-core-styles/scss/partials/general';
+@import '~ipsy-core-styles/scss/partials/colors';
+@import '~ipsy-core-styles/scss/partials/animations';
+
+// Utilities and common devices
+@import '~ipsy-core-styles/scss/partials/devices-screens';
+@import '~ipsy-core-styles/scss/partials/utilities';

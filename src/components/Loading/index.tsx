@@ -1,4 +1,4 @@
-import React, { FC, ReactChildren, ReactChild, ReactElement } from 'react';
+import React, { FC } from 'react';
 
 import loadingImage from './loading.svg';
 import pinkLoadingImage from './rolling.svg';

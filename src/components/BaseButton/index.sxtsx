@@ -1,4 +1,5 @@
 import React, { ReactChildren, ReactChild, SyntheticEvent } from 'react';
+import Loading from '../Loading';
 
 type Props = {
   to?: string;
@@ -48,9 +49,9 @@ const BaseButton = (props: Props) => {
     );
   }
 
-  if (to) {
-    return <AnchorButton {...props} onClick={handleClick} />;
-  }
+  // if (to) {
+  //   return <AnchorButton {...props} onClick={handleClick} />;
+  // }
 
   return <HtmlButton {...props} onClick={handleClick} />;
 };
