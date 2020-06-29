@@ -7,6 +7,7 @@
   "jsnext:main": "build/index.es.js",
   "scripts": {
     "build": "rollup -c",
+    "watch": "rollup -cw",
     "format": "prettier --write .",
     "lint": "eslint --fix .",
     "test": "jest --coverage",
@@ -33,7 +34,9 @@
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@rollup/plugin-commonjs": "^13.0.0",
+    "@rollup/plugin-image": "^2.0.5",
     "@rollup/plugin-node-resolve": "^8.0.1",
+    "@rollup/plugin-url": "^5.0.1",
     "@storybook/addon-actions": "^5.3.19",
     "@storybook/addon-info": "^5.3.19",
     "@storybook/addon-links": "^5.3.19",

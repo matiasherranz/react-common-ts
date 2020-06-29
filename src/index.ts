@@ -1,1 +1,3 @@
-export const sum = (a: number, b: number): number => a + b;
+import Loading from './components/Loading';
+
+export { Loading };
