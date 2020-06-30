@@ -1,7 +1,7 @@
-import React, { ReactChildren, ReactChild, SyntheticEvent } from 'react';
+import React, { SyntheticEvent, FC, ReactNode } from 'react';
 import Loading from '../Loading';
 
-type Props = {
+export type BaseButtonProps = {
   to?: string;
   absolutePath?: boolean;
   submit?: boolean;
@@ -10,19 +10,33 @@ type Props = {
   disabled?: boolean;
   onClick?: (e: SyntheticEvent) => void;
   text?: string;
-  children?: ReactChild | ReactChildren;
+  children?: ReactNode;
 };
 
 // TODO: Export from utils
-export const noop = (...args: any) => {};
+type VoidCallback = () => void;
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+export const noop: VoidCallback = () => {};
 
-const HtmlButton = ({
+const AnchorButton: FC<BaseButtonProps> = ({
+  to,
+  text,
+  children,
+  className,
+  ...props
+}) => (
+  <a className={className} href={to} {...props}>
+    {text || children}
+  </a>
+);
+
+const HtmlButton: FC<BaseButtonProps> = ({
   onClick,
   text,
   children,
   submit = false,
   ...props
-}: Props) => (
+}) => (
   <button
     type={submit ? 'submit' : 'button'}
     {...props}
@@ -35,7 +49,7 @@ const HtmlButton = ({
   </button>
 );
 
-const BaseButton = (props: Props) => {
+const BaseButton: FC<BaseButtonProps> = (props) => {
   const { to, loading = false, disabled, onClick = noop } = props;
 
   const handleClick = (e: SyntheticEvent) =>
@@ -49,9 +63,9 @@ const BaseButton = (props: Props) => {
     );
   }
 
-  // if (to) {
-  //   return <AnchorButton {...props} onClick={handleClick} />;
-  // }
+  if (to) {
+    return <AnchorButton {...props} onClick={handleClick} />;
+  }
 
   return <HtmlButton {...props} onClick={handleClick} />;
 };

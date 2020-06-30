@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 
+import './Loading.scss';
 import loadingImage from './loading.svg';
 import pinkLoadingImage from './rolling.svg';
 /**
