@@ -1,5 +1,7 @@
 import React, { SyntheticEvent, FC, ReactNode } from 'react';
+
 import Loading from '../Loading';
+import { noop } from '../../lib/utils';
 
 export type BaseButtonProps = {
   to?: string;
@@ -12,11 +14,6 @@ export type BaseButtonProps = {
   text?: string;
   children?: ReactNode;
 };
-
-// TODO: Export from utils
-type VoidCallback = () => void;
-// eslint-disable-next-line @typescript-eslint/no-empty-function
-export const noop: VoidCallback = () => {};
 
 const AnchorButton: FC<BaseButtonProps> = ({
   to,
