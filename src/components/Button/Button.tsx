@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import classnames from 'classnames';
 
 import BaseButton from '../BaseButton';
-import { ButtonProps } from './Button.types';
+import ButtonProps from './Button.types';
 
 const Button: FC<ButtonProps> = ({
   link,

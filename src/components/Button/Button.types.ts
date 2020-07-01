@@ -2,7 +2,7 @@ import { SyntheticEvent } from 'react';
 
 import { BaseButtonProps } from '../BaseButton';
 
-export type ButtonProps = {
+type ButtonProps = {
   link?: boolean;
   secondary?: boolean;
   main?: boolean;
@@ -17,3 +17,5 @@ export type ButtonProps = {
   className?: string;
   onClick?: (e: SyntheticEvent) => void;
 } & BaseButtonProps;
+
+export default ButtonProps;

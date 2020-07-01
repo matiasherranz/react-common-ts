@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import { LoadingProps } from './Loading.types';
+import LoadingProps from './Loading.types';
 import loadingImage from './loading.svg';
 import pinkLoadingImage from './rolling.svg';
 /**
