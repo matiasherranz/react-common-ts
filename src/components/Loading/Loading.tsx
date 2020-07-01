@@ -1,6 +1,7 @@
 import React, { FC } from 'react';
+import styled from 'styled-components';
 
-import './Loading.scss';
+import { LoadingProps } from './Loading.types';
 import loadingImage from './loading.svg';
 import pinkLoadingImage from './rolling.svg';
 /**
@@ -9,19 +10,24 @@ import pinkLoadingImage from './rolling.svg';
  * For fullscreen loading, take a look at the `FullScreenLoading` component.
  */
 
-type Props = {
-  loading?: boolean;
-  size?: number;
-  pink?: boolean;
-};
+const StyledDiv = styled.div`
+  width: 100%;
+  text-align: center;
+  display: table;
+`;
 
-const Loading: FC<Props> = ({
+const StyledImage = styled.img`
+  vertical-align: middle;
+  display: inline-block;
+  ${({ width }) => `width: ${width}px;`}
+`;
+
+const Loading: FC<LoadingProps> = ({
   loading = false,
   children,
   size = 50,
   pink = false,
 }) => {
-  const style = { width: `${size || 12}px` };
   if (!loading) {
     if (children) {
       return <div>{children}</div>;
@@ -29,13 +35,13 @@ const Loading: FC<Props> = ({
     return null;
   }
   return (
-    <div className="loading">
-      <img
+    <StyledDiv>
+      <StyledImage
+        width={size}
         src={pink ? pinkLoadingImage : loadingImage}
         alt="loading"
-        style={style}
       />
-    </div>
+    </StyledDiv>
   );
 };
 

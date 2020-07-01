@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions';
 import { withKnobs, boolean } from '@storybook/addon-knobs';
 
 import Button from '../src/components/Button';
+import '../src/index.scss';
 
 type Props = {
   children: ReactNode;

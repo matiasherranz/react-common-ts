@@ -1,24 +1,8 @@
-import React, { FC, SyntheticEvent } from 'react';
+import React, { FC } from 'react';
 import classnames from 'classnames';
 
-import './Button.scss';
-import BaseButton, { BaseButtonProps } from '../BaseButton';
-
-export interface ButtonProps extends BaseButtonProps {
-  link?: boolean;
-  secondary?: boolean;
-  main?: boolean;
-  big?: boolean;
-  medium?: boolean;
-  small?: boolean;
-  outline?: boolean;
-  disabled?: boolean;
-  gray?: boolean;
-  noPadding?: boolean;
-  fullWidth?: boolean;
-  className?: string;
-  onClick?: (e: SyntheticEvent) => void;
-}
+import BaseButton from '../BaseButton';
+import { ButtonProps } from './Button.types';
 
 const Button: FC<ButtonProps> = ({
   link,
