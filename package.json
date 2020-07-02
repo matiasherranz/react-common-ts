@@ -10,6 +10,7 @@
     "watch": "rollup -cw",
     "format": "prettier --write .",
     "lint": "eslint --fix .",
+    "lint:css":"stylelint './src/**/*.tsx'",
     "test": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
@@ -69,6 +70,10 @@
     "rollup-plugin-typescript2": "^0.27.1",
     "sass-loader": "^8.0.2",
     "styled-components": "^5.1.1",
+    "stylelint": "^13.6.1",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.10.0",
     "ts-jest": "^26.1.0",
     "ts-loader": "^7.0.5",
     "typescript": "^3.9.5"
