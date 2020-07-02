@@ -1,5 +1,9 @@
 import IconButton from './IconButton';
-import { IconButtonProps, SocialShareType } from './IconButton.types';
+import {
+  IconButtonProps,
+  SocialShareKeys,
+  SocialShareType,
+} from './IconButton.types';
 
 export default IconButton;
-export { IconButtonProps, SocialShareType };
+export { IconButtonProps, SocialShareKeys, SocialShareType };

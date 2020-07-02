@@ -2,9 +2,13 @@ import React, { FC } from 'react';
 import classnames from 'classnames';
 
 import BaseButton from '../BaseButton';
-import { IconButtonProps, SocialShareType } from './IconButton.types';
+import {
+  IconButtonProps,
+  SocialShareType,
+  SocialShareKeys,
+} from './IconButton.types';
 
-const socialShareTypes: Record<string, SocialShareType> = {
+const socialShareTypes: Record<SocialShareKeys, SocialShareType> = {
   email: {
     className: '',
     iconClassName: 'ipsy-icon icon-ipsy-email',
