@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton basic rendering only with text 1`] = `
+<div>
+  <button
+    class="btn-icon"
+    type="button"
+  >
+    <span />
+    Default button
+  </button>
+</div>
+`;
+
+exports[`IconButton basic rendering with all props 1`] = `
+<div>
+  <button
+    class="btn-icon btn-social-media block btn-facebook"
+    type="button"
+  >
+    <span
+      class="ipsy-icon icon-ipsy-facebook"
+    />
+    Share on Facebook
+  </button>
+</div>
+`;
+
+exports[`IconButton basic rendering with children 1`] = `
+<div>
+  <button
+    class="btn-icon"
+    type="button"
+  >
+    <span />
+    <p
+      class="paragraph"
+    >
+      Test children
+    </p>
+  </button>
+</div>
+`;

@@ -16,10 +16,14 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "rootDirs": ["src", "stories"],
     "jsx": "react"
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "build", "coverage"]
+  "exclude": [
+    "node_modules",
+    "build",
+    "coverage"
+  ]
 }
