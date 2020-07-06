@@ -1,8 +1,19 @@
-import React, { FC, SyntheticEvent } from 'react';
+import React, { FC, ReactNode, SyntheticEvent } from 'react';
 
-import BaseButtonProps from './BaseButton.types';
 import Loading from '../Loading';
 import { noop } from '../../lib/utils';
+
+export type BaseButtonProps = {
+  to?: string;
+  absolutePath?: boolean;
+  submit?: boolean;
+  className?: string;
+  loading?: boolean;
+  disabled?: boolean;
+  onClick?: (e: SyntheticEvent) => void;
+  text?: string;
+  children?: ReactNode;
+};
 
 const AnchorButton: FC<BaseButtonProps> = ({
   to,

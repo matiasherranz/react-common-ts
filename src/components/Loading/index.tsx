@@ -1,9 +1,15 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import LoadingProps from './Loading.types';
 import loadingImage from './loading.svg';
 import pinkLoadingImage from './rolling.svg';
+
+export type LoadingProps = {
+  loading?: boolean;
+  size?: number;
+  pink?: boolean;
+};
+
 /**
  * This component is designed and meant to be used in non-fullscreen contexts,
  * like buttons and such.

@@ -1,7 +1,8 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import IconButton from './IconButton';
+import IconButton from './index';
 
 describe('IconButton', () => {
   test('renders without crashing', () => {
