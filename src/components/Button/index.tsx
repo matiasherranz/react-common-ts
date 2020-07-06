@@ -1,10 +1,9 @@
-import React, { FC, SyntheticEvent } from 'react';
+import React, { FC } from 'react';
 import classnames from 'classnames';
 
-import './Button.scss';
 import BaseButton, { BaseButtonProps } from '../BaseButton';
 
-export interface ButtonProps extends BaseButtonProps {
+export type ButtonProps = {
   link?: boolean;
   secondary?: boolean;
   main?: boolean;
@@ -17,8 +16,7 @@ export interface ButtonProps extends BaseButtonProps {
   noPadding?: boolean;
   fullWidth?: boolean;
   className?: string;
-  onClick?: (e: SyntheticEvent) => void;
-}
+} & BaseButtonProps;
 
 const Button: FC<ButtonProps> = ({
   link,

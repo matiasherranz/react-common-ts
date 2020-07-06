@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, FC, ReactNode } from 'react';
+import React, { FC, ReactNode, SyntheticEvent } from 'react';
 
 import Loading from '../Loading';
 import { noop } from '../../lib/utils';

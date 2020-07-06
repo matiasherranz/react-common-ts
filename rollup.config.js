@@ -4,7 +4,6 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import url from '@rollup/plugin-url';
 import image from '@rollup/plugin-image';
-import postcss from 'rollup-plugin-postcss';
 
 import pkg from './package.json';
 
@@ -24,6 +23,7 @@ export default {
       sourcemap: true,
     },
   ],
+  external: ['styled-components'],
   plugins: [
     external(),
     resolve(),
@@ -36,7 +36,6 @@ export default {
     commonjs({
       include: ['node_modules/**'],
     }),
-    postcss(),
     url(),
     image(),
   ],

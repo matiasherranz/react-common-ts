@@ -18,7 +18,7 @@
     "noUnusedParameters": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "jsx": "react",
+    "jsx": "react"
   },
   "include": ["src/**/*"],
   "exclude": [

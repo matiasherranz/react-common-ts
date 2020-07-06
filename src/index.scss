@@ -1,3 +1,5 @@
+// This file is only for showcasing purpose on Storybook
+
 // Core variables and mixins
 @import '~ipsy-core-styles/scss/partials/variables';
 @import '~ipsy-core-styles/scss/partials/mixins';
@@ -16,3 +18,6 @@
 // Utilities and common devices
 @import '~ipsy-core-styles/scss/partials/devices-screens';
 @import '~ipsy-core-styles/scss/partials/utilities';
+
+// Components
+@import '~ipsy-core-styles/scss/buttons';
