@@ -1,12 +1,30 @@
-import React, { FC } from 'react';
+import React, { FC, ReactNode } from 'react';
 import classnames from 'classnames';
 
-import BaseButton from '../BaseButton';
-import {
-  IconButtonProps,
-  SocialShareType,
-  SocialShareKeys,
-} from './IconButton.types';
+import BaseButton, { BaseButtonProps } from '../BaseButton';
+
+enum SocialShare {
+  email,
+  facebook,
+  messenger,
+  sms,
+  twitter,
+}
+
+export type SocialShareKeys = keyof typeof SocialShare;
+
+export type IconButtonProps = {
+  text?: string;
+  socialShare?: SocialShareKeys;
+  className?: string;
+  fullWidth?: boolean;
+  children?: ReactNode;
+} & BaseButtonProps;
+
+export type SocialShareType = {
+  className?: string;
+  iconClassName?: string;
+};
 
 const socialShareTypes: Record<SocialShareKeys, SocialShareType> = {
   email: {

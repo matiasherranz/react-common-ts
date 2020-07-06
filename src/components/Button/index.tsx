@@ -1,8 +1,22 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
 
-import BaseButton from '../BaseButton';
-import ButtonProps from './Button.types';
+import BaseButton, { BaseButtonProps } from '../BaseButton';
+
+export type ButtonProps = {
+  link?: boolean;
+  secondary?: boolean;
+  main?: boolean;
+  big?: boolean;
+  medium?: boolean;
+  small?: boolean;
+  outline?: boolean;
+  disabled?: boolean;
+  gray?: boolean;
+  noPadding?: boolean;
+  fullWidth?: boolean;
+  className?: string;
+} & BaseButtonProps;
 
 const Button: FC<ButtonProps> = ({
   link,
