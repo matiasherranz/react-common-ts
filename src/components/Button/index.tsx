@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import classnames from 'classnames';
 
 import BaseButton, { BaseButtonProps } from '../BaseButton';
+import './Button.scss';
 
 export type ButtonProps = {
   link?: boolean;
