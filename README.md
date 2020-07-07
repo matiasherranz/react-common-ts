@@ -10,6 +10,7 @@ https://github.com/nvm-sh/nvm
 2 - `npm i`
 
 ## Build
+
 `npm run build`
 
 whatch mode: `npm run build:watch`

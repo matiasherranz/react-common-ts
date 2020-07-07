@@ -1,0 +1,16 @@
+@import '../../index';
+@import '~ipsy-core-styles/scss/partials/footer';
+
+.footer-logged-out .footer .social-media {
+  margin-left: 0;
+}
+
+.footer ul li:first-of-type {
+  margin-bottom: 0px;
+}
+
+.list-inline-desktop {
+  li {
+    display: inline-block;
+  }
+}
