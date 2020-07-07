@@ -9,7 +9,7 @@ import SocialLinks from '../SocialLinks';
 
 import './Footer.scss';
 
-type props = {
+type FooterProps = {
   copyrightYear?: number;
   useWhiteBackground?: boolean;
   hideOnMobile?: boolean;
@@ -61,12 +61,12 @@ const HelpLinks = (
   </ul>
 );
 
-const Footer: FC<props> = ({
+const Footer: FC<FooterProps> = ({
   copyrightYear,
   useWhiteBackground,
   hideOnMobile,
   ShopRenderLink = DefaultRenderLink,
-}: props): ReactElement => (
+}: FooterProps): ReactElement => (
   <footer
     role="contentinfo"
     className={classnames(
