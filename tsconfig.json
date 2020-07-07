@@ -21,11 +21,7 @@
     "esModuleInterop": true,
     "jsx": "react"
   },
-  "include": [
-    "declarations.d.ts",
-    "src/**/*",
-    "stories/**/*"
-  ],
+  "include": ["src/**/*"],
   "exclude": [
     "node_modules",
     "build",
