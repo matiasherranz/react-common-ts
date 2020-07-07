@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, FC } from 'react';
 import classnames from 'classnames';
 import FooterUrlConstants from './footerUrlConstants';
 import type { RenderLinkType } from '../RenderLink';
@@ -61,7 +61,7 @@ const HelpLinks = (
   </ul>
 );
 
-const Footer = ({
+const Footer: FC<props> = ({
   copyrightYear,
   useWhiteBackground,
   hideOnMobile,
