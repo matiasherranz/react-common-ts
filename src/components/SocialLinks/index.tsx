@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { FC } from 'react';
 import FooterUrlConstants from '../Footer/footerUrlConstants';
 
 import './SocialLinks.scss';
@@ -21,7 +21,7 @@ const LINKS_CONTENT = {
   snapchat: FooterUrlConstants.IPSY_SNAPCHAT_PAGE,
 };
 
-const SocialLinks = ({ ...props }: SocialLinksProps) => (
+const SocialLinks: FC<SocialLinksProps> = ({ ...props }: SocialLinksProps) => (
   <ul className="social-media">
     {Object.keys(LINKS_CONTENT).map((socialKey) =>
       props[socialKey] ? (
