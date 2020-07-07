@@ -1,4 +1,4 @@
-import React, { ReactNode, ReactElement, useState, useEffect } from 'react';
+import React, { FC, ReactNode, ReactElement, useState, useEffect } from 'react';
 
 import './FullScreenLoading.scss';
 
@@ -21,25 +21,25 @@ import heart from './heart.gif';
 
 const IMAGE_TYPE_ANIMATED = 'ANIMATED';
 
-type defaultPropTypes = {
+type DefaultPropTypes = {
   loading?: boolean;
   children?: ReactNode;
   opacity?: number;
   zIndex?: number;
   spinnerWidth?: number;
-  message?: ReactNode | string;
+  message?: ReactNode;
 };
 
 type TimeoutID = number;
 
-export const DefaultFullScreenLoading = ({
+export const DefaultFullScreenLoading: FC<DefaultPropTypes> = ({
   loading = false,
   children,
   opacity = 0.9,
   zIndex,
   spinnerWidth = 44,
   message,
-}: defaultPropTypes): ReactElement => {
+}: DefaultPropTypes): ReactElement => {
   if (!loading) {
     return <div>{children}</div>;
   }
@@ -71,26 +71,26 @@ export const DefaultFullScreenLoading = ({
   );
 };
 
-type propTypes = defaultPropTypes & {
+type PropTypes = DefaultPropTypes & {
   imageOverride?: string;
   imageOverrideType?: string;
   timeout?: number;
 };
 
-const FullScreenLoading = (props: propTypes): ReactElement => {
+const FullScreenLoading: FC<PropTypes> = ({
+  imageOverride,
+  imageOverrideType,
+  opacity = 1,
+  spinnerWidth = 14,
+  message = '',
+  loading = false,
+  timeout = 0,
+  zIndex,
+  children,
+}: PropTypes): ReactElement => {
   let timeoutId: Nullable<TimeoutID> = null;
-  const onByTimeout = !!(props.timeout && props.timeout > 0);
+  const onByTimeout = !!(timeout && timeout > 0);
   const [on, setOn] = useState(onByTimeout);
-  const {
-    imageOverride,
-    imageOverrideType,
-    opacity,
-    zIndex,
-    spinnerWidth,
-    message,
-    children,
-    loading,
-  } = props;
 
   const hideInterstitial = () => setOn(false);
 
@@ -98,8 +98,8 @@ const FullScreenLoading = (props: propTypes): ReactElement => {
     imageType === IMAGE_TYPE_ANIMATED;
 
   useEffect(() => {
-    if (props.timeout) {
-      timeoutId = setTimeout(hideInterstitial, props.timeout);
+    if (timeout) {
+      timeoutId = setTimeout(hideInterstitial, timeout);
     }
 
     return () => {
@@ -163,16 +163,6 @@ const FullScreenLoading = (props: propTypes): ReactElement => {
   }
 
   return <div>{markup}</div>;
-};
-
-FullScreenLoading.defaultProps = {
-  imageOverride: undefined,
-  imageOverrideType: undefined,
-  loading: false,
-  opacity: 1,
-  spinnerWidth: 44,
-  message: '',
-  timeout: 0,
 };
 
 export default FullScreenLoading;
