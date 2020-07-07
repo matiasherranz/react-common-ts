@@ -10,7 +10,7 @@
     "watch": "rollup -cw",
     "format": "prettier --write .",
     "lint": "eslint --fix .",
-    "lint:css":"stylelint './src/**/*.tsx'",
+    "lint:css": "stylelint './src/**/*.tsx'",
     "test": "jest --coverage",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
