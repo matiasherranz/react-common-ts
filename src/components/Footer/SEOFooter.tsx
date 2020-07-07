@@ -54,7 +54,7 @@ const half = Math.round(totalLinks / 2);
 // Reference: https://ipsycorp.atlassian.net/browse/APPS-4185
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 const SEOFooter = ({
-  copyrightYear,
+  copyrightYear = new Date().getFullYear(),
   hideOnMobile,
   ShopRenderLink = DefaultRenderLink,
   RenderLink = DefaultRenderLink,
@@ -295,10 +295,6 @@ const SEOFooter = ({
       </div>
     </footer>
   );
-};
-
-SEOFooter.defaultProps = {
-  copyrightYear: new Date().getFullYear(),
 };
 
 export default SEOFooter;
