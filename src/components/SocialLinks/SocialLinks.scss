@@ -1,0 +1,60 @@
+@import '../../index';
+@import '~ipsy-core-styles/scss/partials/footer';
+@import '~ipsy-core-styles/scss/partials/utilities';
+
+/*
+ Little trick to unify the way Social Network icon classes are named in order
+ to be able to use them all like this on the code:
+ `fa icon-ipsy-${socialKey}`
+ */
+.icon-ipsy-youtube {
+  @extend .icon-ipsy-youtube-play;
+}
+
+.social-media {
+  @extend .no-padding;
+
+  [class^="icon-ipsy-"], [class*=" icon-ipsy-"] {
+    @include font-size(19px);
+    color: $gray-darkest;
+  }
+
+  li {
+    display: inline-block;
+    @include avatar-basic(35px,35px);
+    background-color: $white;
+    margin-right: 12px;
+    &:last-child {
+      margin-right: 0;
+    }
+    &.facebook{
+      padding-left: 13px;
+    }
+    &.twitter{
+      padding-left: 7px;
+    }
+    &.pinterest{
+      padding-left: 11px;
+    }
+    &.youtube{
+      padding-left: 5px;
+    }
+    &.instagram{
+      padding-left: 8px;
+    }
+    &.snapchat{
+      padding-left: 7px;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .social-media {
+    [class^="icon-ipsy-"], [class*=" icon-ipsy-"] {
+      padding-right: 30px;
+    }
+    li {
+      margin-right: 23px;
+    }
+  }
+}
