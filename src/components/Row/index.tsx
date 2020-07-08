@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import './Row.scss';
 
 type Props = {
-  children: ReactNode;
+  children?: ReactNode;
   className?: string;
 };
 

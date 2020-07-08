@@ -1,9 +1,9 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 
-import FullScreenLoading from './index';
+import Grid from './index';
 
 it('renders without crashing', () => {
-  const { container } = render(<FullScreenLoading />);
+  const { container } = render(<Grid />);
   expect(container).toMatchSnapshot();
 });
