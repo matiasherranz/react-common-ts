@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<div>
+  <div
+    class="large-gutter-grid no-outer-gutter grid container-fluid"
+  />
+</div>
+`;
