@@ -93,8 +93,8 @@ export const onFocusDarkBackground = (): string => {
 
 export const h5 = (): string => {
   return `
-     ${fontMainRegular()}
-     ${textLineHeight()}
+    ${fontMainRegular()}
+    ${textLineHeight()}
     font-size: ${calculateRem('16px')};
   `;
 };
