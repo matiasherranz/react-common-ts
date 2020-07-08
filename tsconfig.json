@@ -7,6 +7,7 @@
     "sourceMap": true,
     "allowJs": false,
     "declaration": true,
+    "declarationDir": "./build",
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
@@ -21,9 +22,8 @@
     "jsx": "react"
   },
   "include": [
-    "declarations.d.ts",
     "src/**/*",
-    "stories/**/*"
+    "declarations.d.ts"
   ],
   "exclude": [
     "node_modules",
