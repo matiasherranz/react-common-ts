@@ -56,46 +56,46 @@ const Modal: FC<PropTypes> & {
   overflowVisible,
   ...props
 }: PropTypes) => {
-    const supportsFlexBox = !isIE11();
+  const supportsFlexBox = !isIE11();
 
-    return (
-      <ReactModal
-        isOpen={isOpen}
-        className={classnames('react-modal', { 'with-flexbox': supportsFlexBox })}
-        overlayClassName={classnames('react-modal-overlay', {
-          'with-flexbox': supportsFlexBox,
-          'bg-transparent': withoutOverlayBackground,
+  return (
+    <ReactModal
+      isOpen={isOpen}
+      className={classnames('react-modal', { 'with-flexbox': supportsFlexBox })}
+      overlayClassName={classnames('react-modal-overlay', {
+        'with-flexbox': supportsFlexBox,
+        'bg-transparent': withoutOverlayBackground,
+      })}
+      style={getModalStyles(fixedHeight, minWidth, maxWidth)}
+      contentLabel="modal"
+      onRequestClose={onDismiss}
+      shouldCloseOnOverlayClick
+      {...props}
+    >
+      <div
+        className={classnames({
+          modal: true,
+          'with-padding': withPadding && !fullScreen,
+          'full-screen': fullScreen,
+          'on-top': onTop,
+          'border-bot': withoutOverlayBackground,
+          'overflow-visible': overflowVisible,
         })}
-        style={getModalStyles(fixedHeight, minWidth, maxWidth)}
-        contentLabel="modal"
-        onRequestClose={onDismiss}
-        shouldCloseOnOverlayClick
-        {...props}
       >
-        <div
-          className={classnames({
-            modal: true,
-            'with-padding': withPadding && !fullScreen,
-            'full-screen': fullScreen,
-            'on-top': onTop,
-            'border-bot': withoutOverlayBackground,
-            'overflow-visible': overflowVisible,
-          })}
-        >
-          {showDismiss && (
-            <div className="show-dismiss modal-header">
-              <button
-                aria-label="Close Modal"
-                className="icon-ipsy-close-cross relative right pointer gray-dark"
-                onClick={onDismiss}
-              />
-            </div>
-          )}
-          {children}
-        </div>
-      </ReactModal>
-    );
-  };
+        {showDismiss && (
+          <div className="show-dismiss modal-header">
+            <button
+              aria-label="Close Modal"
+              className="icon-ipsy-close-cross relative right pointer gray-dark"
+              onClick={onDismiss}
+            />
+          </div>
+        )}
+        {children}
+      </div>
+    </ReactModal>
+  );
+};
 
 Modal.setAppElement = (...args) => setAppElement(...args);
 
