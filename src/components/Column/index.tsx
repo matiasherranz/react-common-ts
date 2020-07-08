@@ -1,4 +1,4 @@
-import React, { ReactNode, ReactElement } from 'react';
+import React, { FC, ReactNode, ReactElement } from 'react';
 import classNames from 'classnames';
 
 import './Column.scss';
@@ -27,7 +27,7 @@ type Props = {
   lgPull?: OffsetCount;
 };
 
-const Column = ({
+const Column: FC<Props> = ({
   children,
   className,
   xs,

@@ -1,4 +1,4 @@
-import React, { ReactNode, ReactElement } from 'react';
+import React, { FC, ReactNode, ReactElement } from 'react';
 import classNames from 'classnames';
 
 export type Props = {
@@ -9,7 +9,7 @@ export type Props = {
   outerGutter?: boolean;
 };
 
-const Grid = ({
+const Grid: FC<Props> = ({
   children,
   className,
   gutterSize = 'large',
