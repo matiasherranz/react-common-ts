@@ -1,9 +1,9 @@
-import { ComponentType, ReactNode } from 'react';
+import { ComponentType, ReactNode, MouseEvent } from 'react';
 export { default as DefaultRenderLink } from './DefaultRenderLink';
 
 export type RenderLinkProps = {
   url?: string;
-  onClick?: () => void;
+  onClick?: (event: MouseEvent<HTMLElement>) => void;
   children: ReactNode;
   [x: string]: unknown;
 };

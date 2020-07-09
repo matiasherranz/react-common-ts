@@ -1,0 +1,21 @@
+@import "../../index";
+@import "~ipsy-core-styles/scss/partials/main-nav";
+
+button {
+  &.back-button {
+    float: left;
+  }
+}
+.ios-navigation-wrapper {
+  padding-top: 59px;
+}
+
+.clickable-header-item {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: $screen-sm) {
+  .ios-navigation-wrapper {
+    padding-top: 81px;
+  }
+}
