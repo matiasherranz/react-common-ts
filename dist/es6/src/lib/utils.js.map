@@ -1,0 +1,1 @@
+{"version":3,"file":"utils.js","sources":["../../../../src/lib/utils.ts"],"sourcesContent":["export type Callback = () => void;\n// eslint-disable-next-line @typescript-eslint/no-empty-function\nexport const noop: Callback = () => {};\n"],"names":[],"mappings":"AACA;IACa,IAAI,GAAa;;;;"}

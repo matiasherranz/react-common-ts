@@ -7,7 +7,7 @@
     "sourceMap": true,
     "allowJs": false,
     "declaration": true,
-    "declarationDir": "./build",
+    "declarationDir": "./dist/es6/src",
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,

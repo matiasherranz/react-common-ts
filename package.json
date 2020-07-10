@@ -2,9 +2,9 @@
   "name": "react-common-ts",
   "version": "1.0.0",
   "description": "",
-  "main": "build/index.js",
-  "module": "build/index.es.js",
-  "jsnext:main": "build/index.es.js",
+  "main": "dist/es5/src/index.js",
+  "module": "dist/es6/src/index.js",
+  "jsnext:main": "dist/es6/src/index.js",
   "scripts": {
     "build": "rollup -c",
     "watch": "rollup -cw",

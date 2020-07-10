@@ -4,24 +4,22 @@ import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import url from '@rollup/plugin-url';
 import image from '@rollup/plugin-image';
-import { terser } from 'rollup-plugin-terser';
-
-import pkg from './package.json';
 
 export default {
   input: 'src/index.ts',
   output: [
     {
-      file: pkg.main,
+      dir: './dist/es5',
       format: 'cjs',
       exports: 'named',
       sourcemap: true,
     },
     {
-      file: pkg.module,
+      dir: './dist/es6',
       format: 'esm',
       exports: 'named',
       sourcemap: true,
+      preserveModules: true,
     },
   ],
   external: ['styled-components'],
